@@ -1,4 +1,4 @@
-package com.desafio.msCostumer;
+package com.desafio.msCustomer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

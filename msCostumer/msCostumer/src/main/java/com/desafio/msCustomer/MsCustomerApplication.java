@@ -1,13 +1,13 @@
-package com.desafio.msCostumer;
+package com.desafio.msCustomer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MsCostumerApplication {
+public class MsCustomerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsCostumerApplication.class, args);
+		SpringApplication.run(MsCustomerApplication.class, args);
 	}
 
 }
