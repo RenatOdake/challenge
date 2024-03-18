@@ -4,6 +4,7 @@ import com.desafio.msCustomer.address.dto.AddressDTORequest;
 import com.desafio.msCustomer.address.dto.AddressDTOResponse;
 import com.desafio.msCustomer.address.exception.AddressNotFoundException;
 import com.desafio.msCustomer.address.model.Address;
+
 import com.desafio.msCustomer.address.repository.AddressRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,8 +13,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AddressServiceImpl implements AddressService {
     private final AddressRepository addressRepository;
+    private final StateServiceImpl stateService;
     @Override
     public AddressDTOResponse save(AddressDTORequest request) {
+        stateService.findByName(request.state());
         Address addressSaved = addressRepository.save(new Address(request));
         return new AddressDTOResponse(addressSaved);
     }

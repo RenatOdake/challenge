@@ -42,7 +42,7 @@ public class CustomerServiceImpl implements  CustomerService {
                 .map(customerTemporary -> new Customer(
                         customerTemporary.getId(), request.cpf(), request.firstName(),
                         request.lastName(), request.sex(), request.birthDate(),
-                        request.email(), request.password(), request.active()))
+                        request.email(), customerTemporary.getPassword(), request.active()))
                 .orElseThrow(()->new CustomerNotFindException(String.format("Customer with id %s do not exist", id)));
 
         return new CustomerDTOResponse(customerRepository.save(customer));
