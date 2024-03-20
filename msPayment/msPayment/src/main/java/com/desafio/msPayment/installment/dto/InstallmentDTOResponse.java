@@ -1,7 +1,6 @@
-package com.desafio.msPayment.installment.model.dto;
+package com.desafio.msPayment.installment.dto;
 
 import com.desafio.msPayment.installment.model.Installment;
-import jakarta.persistence.Column;
 
 public record InstallmentDTOResponse(
         Long id,

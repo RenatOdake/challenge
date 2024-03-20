@@ -10,7 +10,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.util.List;
 
 @ControllerAdvice
-public class ExceptionHandler extends ResponseEntityExceptionHandler {
+public class CustomerControllerAdvice extends ResponseEntityExceptionHandler {
     @org.springframework.web.bind.annotation.ExceptionHandler(CustomerNotFindException.class)
     protected ResponseEntity<Object> handleCustomerNotFoundException(CustomerNotFindException ex, WebRequest request){
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;

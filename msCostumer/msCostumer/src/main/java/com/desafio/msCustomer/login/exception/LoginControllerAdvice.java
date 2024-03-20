@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.util.List;
 
 @ControllerAdvice
-public class LoginErrorHandler extends ResponseEntityExceptionHandler {
+public class LoginControllerAdvice extends ResponseEntityExceptionHandler {
     @ExceptionHandler
     protected ResponseEntity<Object> handlerLoginIncorrect(LoginIncorrectException ex, WebRequest request){
         HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
