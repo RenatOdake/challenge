@@ -1,4 +1,4 @@
-package com.desafio.msCatalog.product.exception;
+package com.desafio.msCatalog.category.exception;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,2 +1,7 @@
-package com.desafio.msCatalog.product.exception;public class ProductNotFoundException {
+package com.desafio.msCatalog.product.exception;
+
+public class ProductNotFoundException extends RuntimeException{
+    public ProductNotFoundException(String message){
+        super(message);
+    }
 }
